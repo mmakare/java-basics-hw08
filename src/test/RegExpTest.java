@@ -13,12 +13,14 @@ public class RegExpTest {
   @DataProvider(name = "text")
   public static Object[][] text() {
     return new Object[][]{
-        {"8.8.8.8", "8.8.8.8"},
-        {"http://192.168.1.1/index.html", "192.168.1.1"},
-        {"This text contains a valid IP address 254.254.254.254, find it!", "254.254.254.254"},
-        {"IP could not have negative numbers like -1.-2.-3.-4", ""},
-        {" Invalid IP: 300.300.300.300!", ""}
-        // TODO add 2 more test data here
+            {"8.8.8.8", "8.8.8.8"},
+            {"http://192.168.1.1/index.html", "192.168.1.1"},
+            {"This text contains a valid IP address 254.254.254.254, find it!", "254.254.254.254"},
+            {"IP could not have negative numbers like -1.-2.-3.-4", ""},
+            {" Invalid IP: 300.300.300.300!", ""},
+            {" Invalid IP: cf52774330", ""},
+            {" Invalid IP: 192a.a168.1.1", ""}
+            // TODO add 2 more test data here
     };
   }
 
